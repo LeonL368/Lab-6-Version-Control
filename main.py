@@ -32,7 +32,7 @@ def main():  # Decoder function
                 password = encode(s)
                 print("Your password has been encoded and stored!\n")
             elif choice == 2:
-                print(f"The encoded password is {encode(s)}, and the original password is {decode(password)}.\n")
+                print(f"The encoded password is {password}, and the original password is {decode(password)}.\n")
             else:
                 raise ValueError  # Catch value error if choice is not 1,2,3
         except ValueError:
