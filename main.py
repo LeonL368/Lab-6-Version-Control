@@ -7,8 +7,13 @@ def encode(s): #Encoder function
     return res
 
 def decode(s):
-    return s
+    decodedres = ""
+    for char in s:
+        res += str((int(char)-3)%10) 
+        decodedres += res
 
+
+    return s
 def main(): #Decoder function
     password = ""
     while True:
@@ -22,7 +27,7 @@ def main(): #Decoder function
                 password = encode(s)
                 print("Your password has been encoded and stored!\n")
             elif choice ==2:
-                print(f"The encoded password is {password}, and the original password is {decode(password)}.\n")
+                print(f"The encoded password is {s}, and the original password is {decode(s)}.\n")
             else:
                 raise ValueError #Catch value error if choice is not 1,2,3
         except ValueError:
