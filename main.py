@@ -8,12 +8,13 @@ def encode(s): #Encoder function
 
 def decode(s):
     decodedres = ""
+    
     for char in s:
-        res += str((int(char)-3)%10) 
+        res = str((int(char)-3)%10) 
         decodedres += res
 
 
-    return s
+    return decodedres
 def main(): #Decoder function
     password = ""
     while True:
